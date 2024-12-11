@@ -6,6 +6,8 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const DBURI=`mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@${process.env.DBURL}/`
+
 app.use(cors());
 app.use(bodyParser.json());
 
